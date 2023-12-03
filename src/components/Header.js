@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
+import logo from '/assets/loggo.png';
+// import { createPortal } from 'react-dom';
+// import { createPortal } from 'react-dom';
 import { Link, useMatch } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { PiCaretDownBold } from 'react-icons/pi';
 import Sidebar from './sideBar';
 import { createPortal } from 'react-dom';
 
+
 // Overlay component for modal background
 const Overlay = ({ onClose }) => {
-  return createPortal(
+  return (
+    createPortal(
     <div
       className={`fixed top-0 left-0 right-0 bottom-0 z-[10000] bg-[#282c3f] opacity-70`}
       onClick={onClose}
     ></div>,
     document.getElementById('overlay')
+    )
   );
 };
 

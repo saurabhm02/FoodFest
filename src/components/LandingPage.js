@@ -110,7 +110,7 @@ const LandingPage = () => {
 		<div className="flex flex-col pt-[0px] h-full relative">
 			<div className="">
 				<div className="mt-[-40px] relative">
-					<div className="relative z-10">
+					<div className="relative z-10 Landing">
 						<div className="min-w-[1200px] max-w-[1200px] mx-auto h-[540px]">
 							<div className="w-[680px] pr-[40px] flex flex-col justify-around gap-0">
 								<div className="flex flex-row justify-between">
@@ -233,9 +233,10 @@ const LandingPage = () => {
 						>	
 						</div>
 					</div>
-					<div className="bg-[#2b1e16] px-5 z-0">
-						<div className="relative flex min-w-[1200px] max-w-[1200px] mx-auto pb-[80px] justify-between">
-							<div className="text-center text-white">
+
+					<div className="bg-[#2b1e16] px-5 z-0 landingD">
+						<div className="relative flex min-w-[1200px] max-w-[1200px] mx-auto pb-[80px] justify-between landingDetails">
+							<div className="text-center text-white landingDetailsp1">
 								<div className="flex h-[250px] items-end justify-center pt-0">
 									<img
 										className="mb-[42px] z-0"
@@ -295,6 +296,11 @@ const LandingPage = () => {
 			</div>
 			<Footer />
 		</div>
+		
+
+
+  
+
 	);
 };
 

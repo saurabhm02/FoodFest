@@ -883,11 +883,30 @@ a{
 
 /* CSS for mobile devices */
 
-@media (max-width:1060px) {
+@media (max-width:1160px) {
+
   .cartPage{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+  }
+  .LandingUPP{
+    width: full;
+  }
+  .landingDetailsp1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .landingDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .landingDetailsp1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

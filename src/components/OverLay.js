@@ -14,4 +14,4 @@ const Overlay = ({onClose}) => {
     )
 }
 
-export default Overlay
+export default Overlay;

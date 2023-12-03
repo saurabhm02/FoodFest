@@ -1,0 +1,37 @@
+{
+  "name": "foodfest-app",
+  "version": "1.0.0",
+  "description": "Food Fest App",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "author": "Saurabh Mahapatra",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@parcel/transformer-react-refresh-wrap": "^2.10.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.10.0",
+    "postcss": "^8.4.31",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@parcel/transformer-typescript-types": "^2.10.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "babelrc": "^0.0.7",
+    "firebase": "^10.5.0",
+    "parcel-bundler": "^1.12.5",
+    "postcss-cli": "^8.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.11.0",
+    "react-multi-carousel": "^2.8.4",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "^6.14.2",
+    "react-toastify": "^9.1.3"
+  }
+}

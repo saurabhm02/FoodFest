@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link, useMatch } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { PiCaretDownBold } from 'react-icons/pi';
-import Overlay from "./Overlay";
+import Overlay from './Overlay';
 import Sidebar from './sideBar';
 
 

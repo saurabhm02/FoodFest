@@ -1,13 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
-import {Img_Url} from "../config";
 import { useState, useEffect} from "react";
 import Shimmer from "./Shimmer.js";
 import { Link } from 'react-router-dom';
-import { Swiggy_Api } from "../config";
-import useResData from "../utils/useResData";
 import useOnline from "../utils/useOnline";
 import UserOffline from "./userOffline";
-import { filterData } from "../Utils/Helper"; 
 import FoodCarousel from "./Banner";
 import ItemCarousel from "./ItemCarousel";
 import ResCarousel from "./ResCarousel";
@@ -16,9 +12,6 @@ import { CORS_PROXY_URL } from "../config";
 
 
 const Body = () => {
-  const [searchInput, setSearchInput] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  // const [filteredRestaurants, setFilteredRestaurants] = useState(null);
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
@@ -61,23 +54,6 @@ const Body = () => {
     if (!isOnline) {
       return <UserOffline />
     }
-  
-
-    const searchData = (searchInput, restaurants) => {
-      if (searchInput !== "") {
-        const filteredData = filterData(searchInput, restaurants);
-        setFilteredRestaurants(filteredData);
-        setErrorMessage("");
-        if (filteredData?.length === 0) {
-          setErrorMessage(
-            `Sorry, we couldn't find any results for "${searchInput}"`
-          );
-        }
-      } else {
-        setErrorMessage("");
-        setFilteredRestaurants(restaurants);
-      }
-    };
   
     if (!allRestaurants){
       <Shimmer/>

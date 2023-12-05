@@ -1,6 +1,5 @@
 import { Img_Url } from "../config";
 import { useSelector, useDispatch } from "react-redux";
-import { clearCart, removeItems } from "../utils/cartSlice";
 import { BiCheckboxSquare, BiCaretUpSquare } from "react-icons/bi";
 import emptyCart from "../../assets/emptycart.png";
 import { addItem, clearCart, clearRestaurant, computeTotal, removeItem } from "../utils/cartSlice";

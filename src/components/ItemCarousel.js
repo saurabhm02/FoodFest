@@ -30,7 +30,7 @@ const ItemCarousel = (items) => {
         <Carousel responsive={responsive}>
           { items?.data ? (
             items.data.map((data) => (
-            <div key={data.id} className='pr-6 block cursor-pointer'>
+            <div key={data.id} className=''>
               <img
                 src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/${data?.imageId}`}
                 className="object-cover border-none"

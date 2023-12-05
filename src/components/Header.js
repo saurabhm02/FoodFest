@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import logo from '/assets/loggo.png';
-// import { createPortal } from 'react-dom';
-// import { createPortal } from 'react-dom';
 import { Link, useMatch } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { PiCaretDownBold } from 'react-icons/pi';
@@ -38,7 +36,9 @@ const Header = () => {
     setShowMobileMenu(!showMobileMenu);
   };
 
-  const { address } = JSON.parse(localStorage.getItem('swgy_userLocation'));
+//   const { address } = JSON.parse(localStorage.getItem('swgy_userLocation'));
+const userLocation = JSON.parse(localStorage.getItem('swgy_userLocation'));
+const { address } = userLocation || {};
 
   return (
     <>
@@ -46,7 +46,7 @@ const Header = () => {
         <div className="h-full flex justify-between items-center mx-auto px-4 md:px-6 lg:px-8 lg:mx-8">
             <div className="flex items-center">
                 <Link to="/" className="w-14 h-14">
-                    <img src={logo} alt="user-icon" className="icon" width={100} height={80} />
+                    <img data-testid="logo" src={logo} alt="user-icon" className="icon" width={100} height={80} />
                 </Link>
                 {(homeMatch || restroMatch) && 
                     <div className="ml-8 h-10 flex items-center max-w-xs self-center cursor-pointer hover:text-[#fc8019] text-sm group" onClick={() => setShowSidebar(!showSidebar)}>

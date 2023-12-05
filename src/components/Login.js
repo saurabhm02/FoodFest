@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import toast from 'react-hot-toast';
 import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai";
 import { Link, useNavigate } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {

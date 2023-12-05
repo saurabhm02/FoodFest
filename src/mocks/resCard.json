@@ -1,0 +1,117 @@
+{
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "680128",
+      "name": "The Burger Company",
+      "uuid": "226baec8-3f85-4247-aa55-f519d25e165c",
+      "city": "113",
+      "area": "North Ajmer",
+      "totalRatingsString": "Too Few Ratings",
+      "cloudinaryImageId": "2fef59a8d61cc3861c8f0fc1cbf12a8c",
+      "cuisines": [
+        "Fast Food",
+        "Italian",
+        "Beverages",
+        "Snacks"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 20000,
+      "costForTwoString": "₹200 FOR TWO",
+      "deliveryTime": 29,
+      "minDeliveryTime": 29,
+      "maxDeliveryTime": 29,
+      "slaString": "29 MINS",
+      "lastMileTravel": 4.5,
+      "slugs": {
+        "restaurant": "the-burger-comopany-north-ajmer-north-ajmer",
+        "city": "ajmer"
+      },
+      "cityState": "113",
+      "address": "anasagar circular road jeevan vihar colony main road, opposite hotel lake vinora, LIC Colony, Ajmer, Rajasthan 305004, India",
+      "locality": "Anasagar Circular Road",
+      "parentId": 406417,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "ribbon": [
+        {
+          "type": "PROMOTED"
+        }
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 500,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 500,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "500",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "cid=6307681~p=1~eid=00000187-d0d3-7dfb-1462-02c6004a0116",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "4.5 kms",
+      "hasSurge": false,
+      "sla": {
+        "restaurantId": "680128",
+        "deliveryTime": 29,
+        "minDeliveryTime": 29,
+        "maxDeliveryTime": 29,
+        "lastMileTravel": 4.5,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": true,
+      "avgRating": "3.2",
+      "totalRatings": 0,
+      "new": false
+    },
+    "subtype": "basic"
+  }

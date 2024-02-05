@@ -1,17 +1,25 @@
 // This Folder contain All Hardcored Data 
 
+export const CORSPROXY = "https://erin-glamorous-earthworm.cyclic.app/api/proxy/swiggy/dapi/";
+export const MENU_API = `${CORSPROXY}menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.9747271&lng=88.43372099999999&restaurantId=`;
 export const Img_Url ="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-export const CORS_PROXY_URL = "https://corsproxy.io/?";
- export const Swiggy_Api = `${CORS_PROXY_URL}https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.2231589&lng=75.7670466&page_type=DESKTOP_WEB_LISTING`
+export const CDN_URL =
+  "https://corsproxy.org/?https%3A%2F%2Fres.cloudinary.com%2Fswiggy%2Fimage%2Fupload%2Ffl_lossy%2Cf_auto%2Cq_auto%2Cw_508%2Ch_320%2Cc_fill";
+export const CORS_PROXY_URL = "https://erin-glamorous-earthworm.cyclic.app/api/proxy/swiggy/dapi/";
+ export const Swiggy_Api = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.2231589&lng=75.7670466&page_type=DESKTOP_WEB_LISTING`
 
 
 // export const Swiggy_Api = `${CORS_PROXY_URL}https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&page_type=DESKTOP_WEB_LISTING`
   export const swiggy_menu_api_URL =
   `${CORS_PROXY_URL}https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=31.2231589&lng=75.7670466&&submitAction=ENTER&restaurantId=`
 
-  export const MenuItem_Img_Url = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
+  export const MenuItem_Img_Url = "https://corsproxy.org/?https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
   export const MENU_ITEM_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
   export const RESTAURANT_TYPE_KEY = "type.googleapis.com/swiggy.presentation.food.v2.Restaurant";
+
+  export const POPULAR_CUISINES = "https://corsproxy.org/?https%3A%2F%2Fres.cloudinary.com%2Fswiggy%2Fimage%2Fupload%2Ffl_lossy%2Cf_auto%2Cq_auto";
+  export const SEARCH = "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Fsearch%2Fsuggest%3Flat%3D25.603916%26lng%3D85.1360248%26trackingId%3Dundefined%26str%3D";
+
 
   export const Github_UserName = "saurabhm02";
   export const Github_repoName = "React-Notes";

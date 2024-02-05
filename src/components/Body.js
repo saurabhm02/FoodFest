@@ -8,8 +8,7 @@ import FoodCarousel from "./Banner";
 import ItemCarousel from "./ItemCarousel";
 import ResCarousel from "./ResCarousel";
 import ButtonList from "../LeftRight/ButtonList";
-import { CORS_PROXY_URL } from "../config";
-
+import {CORSPROXY} from "../../src/config.js"
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -29,9 +28,10 @@ const Body = () => {
   
   async function getRestaurants() {  
    
-    try {
-      const res = await fetch(`${CORS_PROXY_URL}https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&page_type=DESKTOP_WEB_LISTING`)
+    try {                                                       
+      const res = await fetch(`${CORSPROXY}restaurants/list/v5?lat=${lat}&lng=${lng}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`)
         const {data} = await res.json()
+        console.log(data);
 
 
         const [carousedata] = data?.cards?.filter(({ card: { card } }) => card?.id === "topical_banner")
@@ -39,8 +39,10 @@ const Body = () => {
         const [restGridObj] = data?.cards?.filter(({ card: { card } }) => card?.id === "top_brands_for_you")
             
         setCarousel(carousedata?.card?.card?.imageGridCards);
+        console.log(carousedata?.card?.card?.imageGridCards);
         setItemCarousel(iteamcarousedata?.card?.card?.imageGridCards?.info);
         setAllRestaurants(restGridObj?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        console.log(restGridObj?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredRestaurants(restGridObj?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setResCarousel(restGridObj?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
@@ -48,6 +50,12 @@ const Body = () => {
       console.error(error); 
     }
   }
+
+
+
+  
+  
+  
     
 
     const isOnline = useOnline();
@@ -92,7 +100,7 @@ const Body = () => {
               <div>
                 <ButtonList/>
               </div>
-              <div className="grid grid-cols-1 mx-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start gap-8 mt-8" data-testid='res-list'>
+              <div className="grid grid-cols-1 mx-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  items-start gap-8 mt-8" data-testid='res-list'>
                 {(filteredRestaurants  || []).map(
                   (restaurant) => {
                     return (
@@ -100,6 +108,7 @@ const Body = () => {
                         to={"/restaurant/" + restaurant?.info?.id}
                         key={restaurant?.info?.id}
                       >
+                      <div>Hello</div>
                         {/* if we click on any restaurant card it will redirect to that restaurant menu page */}
                         <RestaurantCard {...restaurant?.info} />
                       </Link>

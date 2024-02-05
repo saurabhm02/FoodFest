@@ -30,7 +30,8 @@ const Sidebar = ({show, onClose}) => {
 
         setShowCancel(true);
         setLocations([]);
-        const res = await fetch(`${CORS_PROXY_URL}https://www.swiggy.com/dapi/misc/place-autocomplete?input=${searchQuery}&types=`)
+        // const res = await fetch(`${CORS_PROXY_URL}https://www.swiggy.com/dapi/misc/place-autocomplete?input=${searchQuery}&types=`)
+        const res = await fetch(`https://erin-glamorous-earthworm.cyclic.app/api/proxy/swiggy/dapi/misc/place-autocomplete?input=${searchQuery}&types=`)
         const {data} = await res.json();
 
         setLocations(data);
@@ -53,7 +54,7 @@ const Sidebar = ({show, onClose}) => {
     const handleFetchLatLong = async (placeId) => {
         setLoading(true);
 
-        const res = await fetch(`${CORS_PROXY_URL}https://www.swiggy.com/dapi/misc/address-recommend?place_id=${placeId}`);
+        const res = await fetch(`https://erin-glamorous-earthworm.cyclic.app/api/proxy/swiggy/dapi/misc/address-recommend?place_id=${placeId}`);
         const {data} = await res.json();
 
         if(data?.length > 0) {
@@ -77,6 +78,8 @@ const Sidebar = ({show, onClose}) => {
             }
         }
     }
+
+    
 
     const fetchLocationByGPS = () => {
         let success = async (position) => {

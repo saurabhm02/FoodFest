@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import logo from '/assets/loggo.png';
-import locateLogo from "./Aassets/location.png";
 import Footer from "./Footer";
 import { CORS_PROXY_URL } from "../config";
 import { Link } from "react-router-dom";
@@ -19,7 +18,7 @@ const LandingPage = () => {
             return;
 
         setLocations([]);
-        const res = await fetch(`${CORS_PROXY_URL}https://www.swiggy.com/dapi/misc/place-autocomplete?input=${searchQuery}&types=`)
+        const res = await fetch(`https://erin-glamorous-earthworm.cyclic.app/api/proxy/swiggy/dapi/misc/place-autocomplete?input=${searchQuery}&types=`)
         const {data} = await res.json();
 
         setLocations(data);
@@ -50,7 +49,7 @@ const LandingPage = () => {
     const handleFetchLatLong = async (placeId) => {
         setLoading(true);
 
-        const res = await fetch(`${CORS_PROXY_URL}https://www.swiggy.com/dapi/misc/address-recommend?place_id=${placeId}`);
+        const res = await fetch(`https://erin-glamorous-earthworm.cyclic.app/api/proxy/swiggy/dapi/misc/address-recommend?place_id=${placeId}`);
         const {data} = await res.json();
 
         if(data?.length > 0) {

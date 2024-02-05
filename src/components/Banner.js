@@ -47,19 +47,3 @@ const FoodCarousel = (carousel) => {
 };
 
 export default FoodCarousel;
-
-
-{/* <>
-      <h2 className='font-bold text-2xl my-4'>Best offers for you</h2>
-      {carousel.data && carousel.data.info ? (
-        <Carousel responsive={responsive}>
-          {carousel.data.info.map((data) => (
-            <div key={data.id} className='px-2 cursor-pointer'>
-              <img src={Img_Url + data.imageId} alt={data.altText} />
-            </div>
-          ))}
-        </Carousel>
-      ) : (
-        <p>Loading or empty data...</p>
-      )}
-    </> */}
